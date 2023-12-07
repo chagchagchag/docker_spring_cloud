@@ -5,7 +5,7 @@ services:
     container_name: docker-discovery-service
     hostname: discovery-service
     ports:
-      - "8761:8761"
+      - "9961:9961"
     environment:
       JIB_CONTAINER_PROFILE: compose
       EUREKA_INSTANCE_HOSTNAME: discovery-service
