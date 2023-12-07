@@ -7,6 +7,7 @@ spring:
     import:
       - classpath:cloud-config-git.yml
       - classpath:local-compose-eureka.yml
+      - classpath:actuator.yml
 logging:
   level:
     root: debug

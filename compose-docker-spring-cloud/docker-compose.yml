@@ -10,8 +10,6 @@ services:
       JIB_CONTAINER_PROFILE: compose
     networks:
       - docker-spring-cloud
-    links:
-      - docker-config-service
 #  docker-discovery-client:
 #    image: chagchagchag/docker-discovery-client
 #    environment:
