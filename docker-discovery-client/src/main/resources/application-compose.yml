@@ -1,0 +1,12 @@
+server:
+  port: 8989
+spring:
+  application:
+    name: discovery-client
+  config:
+    import:
+      - classpath:local-compose-eureka.yml
+      - classpath:actuator.yml
+logging:
+  level:
+    root: debug
