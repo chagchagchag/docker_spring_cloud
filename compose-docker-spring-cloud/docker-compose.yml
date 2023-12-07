@@ -23,7 +23,7 @@ services:
 #    image: chagchagchag/docker-discovery-client
 #    environment:
 #      JIB_CONTAINER_PROFILE: compose
-#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:9961/eureka/
 #    ports:
 #      - "8989:8989"
 #    networks:
