@@ -2,13 +2,13 @@ version: '3.7'
 services:
   docker-discovery-service:
     image: chagchagchag/docker-discovery-service
-#    container_name: docker-discovery-service
-    hostname: docker-discovery-service
+    container_name: docker-discovery-service
+    hostname: discovery-service
     ports:
       - "8761:8761"
     environment:
       JIB_CONTAINER_PROFILE: compose
-      EUREKA_INSTANCE_HOSTNAME: docker-discovery-service
+      EUREKA_INSTANCE_HOSTNAME: discovery-service
     networks:
       - docker-spring-cloud
   docker-discovery-client:
