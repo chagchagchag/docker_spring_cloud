@@ -1,8 +1,11 @@
 version: '3.7'
 services:
+  empty:
+    ports:
+      - "0000:0000"
   docker-discovery-service:
     image: chagchagchag/docker-discovery-service
-    container_name: docker-discovery-service
+    container_name: discovery-service
     hostname: discovery-service
     ports:
       - "9961:9961"
