@@ -1,8 +1,13 @@
 version: '3.7'
 services:
-  empty:
+  rabbitmq:
+    image: rabbitmq:3-management
     ports:
-      - "0000:0000"
+      - "4369:4369"
+      - "5671:5671"
+      - "5672:5672"
+      - "25672:25672"
+      - "15672:15672"
   docker-discovery-service:
     image: chagchagchag/docker-discovery-service
     container_name: discovery-service
@@ -14,21 +19,21 @@ services:
       EUREKA_INSTANCE_HOSTNAME: discovery-service
     networks:
       - docker-spring-cloud
-  docker-discovery-client:
-    image: chagchagchag/docker-discovery-client
-    environment:
-      JIB_CONTAINER_PROFILE: compose
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
-    ports:
-      - "8989:8989"
-    networks:
-      - docker-spring-cloud
-    links:
-      - docker-discovery-service
-      - docker-config-service
-    depends_on:
-      - docker-discovery-service
-      - docker-config-service
+#  docker-discovery-client:
+#    image: chagchagchag/docker-discovery-client
+#    environment:
+#      JIB_CONTAINER_PROFILE: compose
+#      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+#    ports:
+#      - "8989:8989"
+#    networks:
+#      - docker-spring-cloud
+#    links:
+#      - docker-discovery-service
+#      - docker-config-service
+#    depends_on:
+#      - docker-discovery-service
+#      - docker-config-service
   docker-config-service:
     image: chagchagchag/docker-config-service
     container_name: docker-config-service
@@ -37,7 +42,7 @@ services:
       - "9999:9999"
     environment:
       JIB_CONTAINER_PROFILE: compose
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:9961/eureka/
     networks:
       - docker-spring-cloud
     links:
