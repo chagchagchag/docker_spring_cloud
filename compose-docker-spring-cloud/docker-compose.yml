@@ -10,6 +10,8 @@ services:
       JIB_CONTAINER_PROFILE: compose
     networks:
       - docker-spring-cloud
+    links:
+      - docker-config-service
 #  docker-discovery-client:
 #    image: chagchagchag/docker-discovery-client
 #    environment:
@@ -27,6 +29,8 @@ services:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://discovery-service:8761/eureka/
     networks:
       - docker-spring-cloud
+    links:
+      - docker-discovery-service
 #  docker-api-gateway-service:
 #    image: chagchagchag/docker-api-gateway-service
 #    environment:
