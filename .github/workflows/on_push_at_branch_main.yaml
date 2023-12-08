@@ -36,6 +36,9 @@ jobs:
           ./gradlew :spring-cloud:eureka-server:clean
           ./gradlew :spring-cloud:eureka-server:jibDockerBuild
           ./gradlew :spring-cloud:eureka-server:jib
+          ./gradlew :spring-cloud:admin-dashboard:clean
+          ./gradlew :spring-cloud:admin-dashboard:jibDockerBuild
+          ./gradlew :spring-cloud:admin-dashboard:jib
           ./gradlew :foobar-user-api:foobar-user-history:clean
           ./gradlew :foobar-user-api:foobar-user-history:jibDockerBuild
           ./gradlew :foobar-user-api:foobar-user-history:jib
