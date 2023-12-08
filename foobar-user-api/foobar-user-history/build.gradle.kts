@@ -54,7 +54,7 @@ jib {
     }
 
     to {
-        image = "chagchagchag/docker-user-service"
+        image = "chagchagchag/docker-user-history"
         // image tag 는 여러개 지정 가능하다.
         tags = setOf("latest")
     }

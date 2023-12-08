@@ -34,6 +34,41 @@ services:
       - eureka-server
     depends_on:
       - eureka-server
+  docker-user-history:
+    image: chagchagchag/docker-user-history
+    container_name: user-history
+    hostname: user-history
+    ports:
+      - "7777:7777"
+    environment:
+      JIB_CONTAINER_PROFILE: compose
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8948/eureka/
+    networks:
+      - docker-spring-cloud
+    links:
+      - eureka-server
+      - docker-config-service
+    depends_on:
+      - eureka-server
+      - docker-config-service
+  docker-user-service:
+    image: chagchagchag/docker-user-service
+    container_name: user-service
+    hostname: user-service
+    ports:
+      - "6666:6666"
+    environment:
+      JIB_CONTAINER_PROFILE: compose
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8948/eureka/
+    networks:
+      - docker-spring-cloud
+    links:
+      - eureka-server
+      - docker-config-service
+      - docker-user-history
+    depends_on:
+      - eureka-server
+      - docker-config-service
 networks:
   docker-spring-cloud:
     external: true
