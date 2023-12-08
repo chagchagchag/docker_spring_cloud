@@ -1,0 +1,12 @@
+server:
+  port: 6666
+spring:
+  application:
+    name: foobar-user-history
+  config:
+    import:
+      - classpath:local-compose-eureka.yml
+      - classpath:actuator.yml
+logging:
+  level:
+    root: debug
