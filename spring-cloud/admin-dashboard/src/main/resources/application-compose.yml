@@ -1,0 +1,12 @@
+server:
+  port: 7776
+spring:
+  application:
+    name: docker-admin-dashboard
+  config:
+    import:
+      - classpath:local-compose-eureka.yml
+      - classpath:actuator.yml
+logging:
+  level:
+    root: debug

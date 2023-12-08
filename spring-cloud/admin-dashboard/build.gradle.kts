@@ -24,9 +24,11 @@ extra["springCloudVersion"] = "2022.0.4"
 
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.springframework.cloud:spring-cloud-config-server")
-    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("de.codecentric:spring-boot-admin-starter-server:2.0.1")
+    implementation("de.codecentric:spring-boot-admin-starter-client:2.0.1")
+    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
@@ -55,7 +57,7 @@ jib {
     }
 
     to {
-        image = "chagchagchag/docker-config-server"
+        image = "chagchagchag/docker-admin-dashboard"
         // image tag 는 여러개 지정 가능하다.
         tags = setOf("latest")
     }
@@ -67,12 +69,12 @@ jib {
         jvmFlags = listOf(
             "-Dspring.profiles.active=${profile}",
             "-XX:+UseContainerSupport",
-            "-Dserver.port=9999",
+            "-Dserver.port=7776",
             "-Dfile.encoding=UTF-8",
         )
 
         // 컨테이너 입장에서 외부로 노출할 포트
-        ports = listOf("9999")
+        ports = listOf("7776")
 
         labels = mapOf(
             "maintainer" to "chagachagchag.dev@gmail.com"

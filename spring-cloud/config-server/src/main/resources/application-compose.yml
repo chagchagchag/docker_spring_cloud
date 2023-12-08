@@ -2,7 +2,7 @@ server:
   port: 9999
 spring:
   application:
-    name: config-service
+    name: docker-config-server
   config:
     import:
       - classpath:cloud-config-git.yml
