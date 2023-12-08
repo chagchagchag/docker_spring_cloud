@@ -26,8 +26,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-    implementation("de.codecentric:spring-boot-admin-starter-server:2.0.1")
-    implementation("de.codecentric:spring-boot-admin-starter-client:2.0.1")
+    implementation("de.codecentric:spring-boot-admin-starter-server:3.1.8")
+    implementation("de.codecentric:spring-boot-admin-starter-client:3.1.8")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
