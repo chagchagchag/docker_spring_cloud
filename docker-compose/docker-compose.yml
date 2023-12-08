@@ -13,7 +13,7 @@ services:
     container_name: eureka-server
     hostname: eureka-server
     ports:
-      - "9961:9961"
+      - "8948:8948"
     environment:
       JIB_CONTAINER_PROFILE: compose
       EUREKA_INSTANCE_HOSTNAME: eureka-server
@@ -27,7 +27,7 @@ services:
       - "9999:9999"
     environment:
       JIB_CONTAINER_PROFILE: compose
-      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:9961/eureka/
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8948/eureka/
     networks:
       - docker-spring-cloud
     links:

@@ -1,9 +1,9 @@
 server:
-  port: 9961
+  port: 8948
 
 spring:
   application:
-    name: discovery-service
+    name: eureka-server
   config:
     import:
       - classpath:local-was-eureka.yml
