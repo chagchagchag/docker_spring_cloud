@@ -2,7 +2,7 @@ server:
   port: 6666
 spring:
   application:
-    name: foobar-user-history
+    name: foobar-user-service
   config:
     import:
       - classpath:local-compose-eureka.yml
