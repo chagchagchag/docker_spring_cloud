@@ -8,6 +8,7 @@ spring:
       - classpath:cloud-config-git.yml
       - classpath:local-compose-eureka.yml
       - classpath:actuator.yml
+      - classpath:spring-boot-admin-client.yml
 logging:
   level:
     root: debug
