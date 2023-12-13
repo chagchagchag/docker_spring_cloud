@@ -26,6 +26,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("de.codecentric:spring-boot-admin-starter-client:3.1.8")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

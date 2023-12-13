@@ -8,3 +8,4 @@ spring:
     import:
       - classpath:local-compose-eureka.yml
       - classpath:actuator.yml
+      - classpath:spring-boot-admin-client.yml
