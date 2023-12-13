@@ -5,8 +5,10 @@ spring:
     name: docker-admin-dashboard
   config:
     import:
+      - classpath:application-compose.yml
       - classpath:local-compose-eureka.yml
       - classpath:actuator.yml
+      - classpath:spring-boot-admin-compose.yml
 logging:
   level:
     root: debug

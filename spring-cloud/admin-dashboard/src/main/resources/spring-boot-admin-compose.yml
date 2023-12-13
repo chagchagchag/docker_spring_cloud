@@ -1,0 +1,6 @@
+spring:
+  boot:
+    admin:
+      ui:
+        poll-timer:
+          logfile: 10000 # 10 초
