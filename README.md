@@ -10,6 +10,8 @@
 
 #### foobar-user-service
 
+[http://localhost:5555/foobar-user-service/welcome](http://localhost:5555/foobar-user-service/welcome)<br>
+
 브라우저 접근 → api-gateway → foobar-user-service (Router 를 통한 접근)
 
 <img src="./img/SCREENSHOT/9.png"/>
@@ -17,6 +19,8 @@
 <br>
 
 
+
+[http://localhost:9991/welcome](http://localhost:9991/welcome)<br>
 
 브라우저 접근 → foobar-user-service (직접 접근)
 
