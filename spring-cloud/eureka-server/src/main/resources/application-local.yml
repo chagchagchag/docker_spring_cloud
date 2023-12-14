@@ -3,7 +3,9 @@ server:
 
 spring:
   application:
-    name: eureka-server
+    name: discovery-service
   config:
     import:
       - classpath:local-was-eureka.yml
+      - classpath:actuator.yml
+#      - classpath:spring-boot-admin-client.yml

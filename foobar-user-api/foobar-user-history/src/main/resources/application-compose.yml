@@ -1,5 +1,5 @@
 server:
-  port: 7777
+  port: 9992
 spring:
   application:
     name: foobar-user-history

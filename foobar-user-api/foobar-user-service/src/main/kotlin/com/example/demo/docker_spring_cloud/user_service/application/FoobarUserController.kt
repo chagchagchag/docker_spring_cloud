@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
 
 @RestController
+@RequestMapping("/")
 class FoobarUserController (
     val createUserResponseFactory: CreateUserResponseFactory,
     val readUserResponseFactory: ReadUserResponseFactory,

@@ -56,7 +56,7 @@ services:
     container_name: user-history
     hostname: user-history
     ports:
-      - "7777:7777"
+      - "9992:9992"
     environment:
       JIB_CONTAINER_PROFILE: compose
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8948/eureka/
@@ -73,7 +73,7 @@ services:
     container_name: user-service
     hostname: user-service
     ports:
-      - "6666:6666"
+      - "9991:9991"
     environment:
       JIB_CONTAINER_PROFILE: compose
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8948/eureka/

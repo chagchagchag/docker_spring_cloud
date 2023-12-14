@@ -1,13 +1,14 @@
 server:
-  port: 9991
+  port: 5555
 spring:
   application:
-    name: foobar-user-service
+    name: api-gateway
   config:
     import:
       - classpath:local-compose-eureka.yml
+      - classpath:local-compose-api-gateway.yml
       - classpath:actuator.yml
       - classpath:spring-boot-admin-client.yml
 logging:
   level:
-    web: info
+    root: debug
