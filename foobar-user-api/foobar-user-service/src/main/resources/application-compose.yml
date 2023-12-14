@@ -10,4 +10,4 @@ spring:
       - classpath:spring-boot-admin-client.yml
 logging:
   level:
-    root: debug
+    web: info
