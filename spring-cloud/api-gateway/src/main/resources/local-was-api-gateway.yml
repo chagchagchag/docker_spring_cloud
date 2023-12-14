@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: foobar-user-service
+          uri: lb://FOOBAR-USER-SERVICE
+          predicates:
+            - Path=/foobar-user-service/login

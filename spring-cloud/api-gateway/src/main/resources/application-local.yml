@@ -6,6 +6,7 @@ spring:
   config:
     import:
       - classpath:local-was-eureka.yml
+      - classpath:local-was-api-gateway.yml
       - classpath:actuator.yml
 #      - classpath:spring-boot-admin-client.yml
 logging:
