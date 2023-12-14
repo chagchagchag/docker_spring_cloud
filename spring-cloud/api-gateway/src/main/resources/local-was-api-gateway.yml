@@ -5,4 +5,21 @@ spring:
         - id: foobar-user-service
           uri: lb://FOOBAR-USER-SERVICE
           predicates:
-            - Path=/foobar-user-service/login
+            - Path=/foobar-user-service/users
+            - Method=Post
+          filters:
+            - RewritePath=/foobar-user-service/(?<segment>.*), /$\{segment}
+        - id: foobar-user-service
+          uri: lb://FOOBAR-USER-SERVICE
+          predicates:
+            - Path=/foobar-user-service/**
+            - Method=Get
+          filters:
+            - RewritePath=/foobar-user-service/(?<segment>.*), /$\{segment}
+        - id: foobar-user-service
+          uri: lb://FOOBAR-USER-SERVICE
+          predicates:
+            - Path=/foobar-user-service/welcome
+            - Method=Get
+          filters:
+            - RewritePath=/foobar-user-service/(?<segment>.*), /$\{segment}
