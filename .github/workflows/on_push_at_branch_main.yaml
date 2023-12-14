@@ -39,6 +39,9 @@ jobs:
           ./gradlew :spring-cloud:admin-dashboard:clean
           ./gradlew :spring-cloud:admin-dashboard:jibDockerBuild
           ./gradlew :spring-cloud:admin-dashboard:jib
+          ./gradlew :spring-cloud:api-gateway:clean
+          ./gradlew :spring-cloud:api-gateway:jibDockerBuild
+          ./gradlew :spring-cloud:api-gateway:jib
           ./gradlew :foobar-user-api:foobar-user-history:clean
           ./gradlew :foobar-user-api:foobar-user-history:jibDockerBuild
           ./gradlew :foobar-user-api:foobar-user-history:jib

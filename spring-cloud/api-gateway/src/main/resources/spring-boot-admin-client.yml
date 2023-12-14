@@ -1,0 +1,20 @@
+spring:
+  boot:
+    admin:
+      client:
+        # admin server 주소
+        url: http://admin-dashboard:7776
+        # 애플리케이션 로딩이 완료된 후 자동으로 Admin Server 에 등록
+        auto-registration: true
+        username: client
+        password: client
+        instance:
+          name: api-gateway-1-5555
+          # 현재 admin-client 자기 자신의 주소
+          service-url: http://api-gateway:5555
+          #          health-url: http://api-gateway:5555/actuator/health
+          #          management-url: http://api-gateway:5555/actuator
+          metadata:
+            user:
+              name: client
+              password: client

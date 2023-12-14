@@ -1,0 +1,13 @@
+server:
+  port: 5555
+spring:
+  application:
+    name: api-gateway
+  config:
+    import:
+      - classpath:local-was-eureka.yml
+      - classpath:actuator.yml
+#      - classpath:spring-boot-admin-client.yml
+logging:
+  level:
+    root: debug

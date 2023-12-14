@@ -3,6 +3,7 @@ include("spring-cloud")
 include("spring-cloud:config-server")
 include("spring-cloud:eureka-server")
 include("spring-cloud:admin-dashboard")
+include("spring-cloud:api-gateway")
 
 include("foobar-user-api")
 include("foobar-user-api:foobar-user-history")
