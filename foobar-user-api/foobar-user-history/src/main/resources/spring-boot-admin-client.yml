@@ -9,11 +9,11 @@ spring:
         username: client
         password: client
         instance:
-          name: foobar-client-2-7777
+          name: foobar-client-2-9992
           # 현재 admin-client 자기 자신의 주소
-          service-url: http://user-history:7777
-          #          health-url: http://localhost:7777/actuator/health
-          #          management-url: http://localhost:7777/actuator
+          service-url: http://user-history:9992
+          #          health-url: http://localhost:9992/actuator/health
+          #          management-url: http://localhost:9992/actuator
           metadata:
             user:
               name: client
