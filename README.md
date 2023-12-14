@@ -84,5 +84,29 @@
 
 ### 포트 사용정보
 
-흐아아... 잠깐 쉬었다가 정리예정 휴...
+포트번호를 일반적으로 사용하는 8000, 8761 등으로 사용하지 않은 이유는 윈도우에 예약된 포트... 때문에 어쩔수 없이 아래처럼 지정했습니다.. 휴... 맥북을 하나 살까 하고 잠깐 미친생각이 들긴 했는데 일단 충동을 참았습니다. 하하하.<br>
+
+- foobar-user-history
+  - port : 9992
+- foobar-user-service
+  - port : 9991
+- spring-cloud
+  - admin-dashboard 
+    - port : 7776
+  - api-gateway
+    - port : 5555
+  - config-server
+    - port : 9999
+  - eureka-server
+    - port : 8948
+
+<br>
+
+
+
+### compose 스케일링
+
+도커컴포즈도 Scaling 을 통해 container 를 여러개 띄울 수 있는데요. 이건 잠깐 쉬었다가 할께요. 휴...
+
+<br>
 
