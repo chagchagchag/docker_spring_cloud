@@ -3,7 +3,7 @@ services:
   rabbitmq:
     image: rabbitmq:3-management
     ports:
-      - "4369:4369"
+      - "9997:9997"
       - "5671:5671"
       - "5672:5672"
       - "25672:25672"
@@ -19,7 +19,22 @@ services:
       EUREKA_INSTANCE_HOSTNAME: eureka-server
     networks:
       - docker-spring-cloud
-  docker-config-server:
+  api-gateway:
+    image: chagchagchag/docker-api-gateway
+    container_name: api-gateway
+    hostname: api-gateway
+    ports:
+      - "5555:5555"
+    environment:
+      JIB_CONTAINER_PROFILE: compose
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8948/eureka/
+    networks:
+      - docker-spring-cloud
+    links:
+      - eureka-server
+    depends_on:
+      - eureka-server
+  config-server:
     image: chagchagchag/docker-config-server
     container_name: config-server
     hostname: config-server
@@ -47,10 +62,10 @@ services:
       - docker-spring-cloud
     links:
       - eureka-server
-      - docker-config-server
+      - config-server
     depends_on:
       - eureka-server
-      - docker-config-server
+      - config-server
   docker-user-history:
     image: chagchagchag/docker-user-history
     container_name: user-history
@@ -64,10 +79,10 @@ services:
       - docker-spring-cloud
     links:
       - eureka-server
-      - docker-config-server
+      - config-server
     depends_on:
       - eureka-server
-      - docker-config-server
+      - config-server
   docker-user-service:
     image: chagchagchag/docker-user-service
     container_name: user-service
@@ -81,11 +96,11 @@ services:
       - docker-spring-cloud
     links:
       - eureka-server
-      - docker-config-server
+      - config-server
       - docker-user-history
     depends_on:
       - eureka-server
-      - docker-config-server
+      - config-server
 networks:
   docker-spring-cloud:
     external: true

@@ -78,7 +78,7 @@ jib {
         )
 
         // 컨테이너 입장에서 외부로 노출할 포트
-        ports = listOf("8948")
+        ports = listOf("5555")
 
         labels = mapOf(
             "maintainer" to "chagachagchag.dev@gmail.com"
