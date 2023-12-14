@@ -68,10 +68,10 @@ services:
       - config-server
   docker-user-history:
     image: chagchagchag/docker-user-history
-    container_name: user-history
+#    container_name: user-history
     hostname: user-history
     ports:
-      - "9992:9992"
+      - "9992"
     environment:
       JIB_CONTAINER_PROFILE: compose
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8948/eureka/
@@ -85,10 +85,10 @@ services:
       - config-server
   docker-user-service:
     image: chagchagchag/docker-user-service
-    container_name: user-service
+#    container_name: user-service
     hostname: user-service
     ports:
-      - "9991:9991"
+      - "9991"
     environment:
       JIB_CONTAINER_PROFILE: compose
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka-server:8948/eureka/
