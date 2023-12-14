@@ -68,12 +68,12 @@ jib {
         jvmFlags = listOf(
             "-Dspring.profiles.active=${profile}",
             "-XX:+UseContainerSupport",
-            "-Dserver.port=7777",
+            "-Dserver.port=9992",
             "-Dfile.encoding=UTF-8",
         )
 
         // 컨테이너 입장에서 외부로 노출할 포트
-        ports = listOf("7777")
+        ports = listOf("9992")
 
         labels = mapOf(
             "maintainer" to "chagachagchag.dev@gmail.com"
