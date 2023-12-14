@@ -73,7 +73,7 @@ jib {
         jvmFlags = listOf(
             "-Dspring.profiles.active=${profile}",
             "-XX:+UseContainerSupport",
-            "-Dserver.port=8948",
+            "-Dserver.port=5555",
             "-Dfile.encoding=UTF-8",
         )
 
