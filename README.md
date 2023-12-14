@@ -8,6 +8,14 @@
 
 ### Screenshot
 
+#### api-gateway
+
+<img src="./img/SCREENSHOT/8.png" width="80%" height="80%"/>
+
+<br>
+
+
+
 #### admin-dashboard
 
 <img src="./img/SCREENSHOT/1.png" width="70%" height="70%"/>
